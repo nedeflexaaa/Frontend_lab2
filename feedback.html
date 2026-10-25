@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Форма зворотного зв'язку FutureTech Start-up. Лабораторна робота №2: Flexbox.">
+    <title>Зворотній зв'язок — FutureTech Start-up</title>
+    <link rel="icon" href="techcomp.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #feedback-title {
+            color: #163a5f;
+        }
+
+        #details {
+            border-left: 3px solid #c2410c;
+        }
+
+        #details:focus {
+            border-left-color: #163a5f;
+        }
+    </style>
+</head>
+
+<body class="feedback-page">
+    <header class="site-header" id="top">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="FutureTech Start-up — на головну сторінку">
+                <img class="brand-logo" src="techcomp.png" alt="Логотип FutureTech Start-up" width="48" height="48">
+                <span class="brand-name">FutureTech Start-up</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Головна навігація">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="projects.html">Проєкти</a></li>
+                    <li><a href="feedback.html" aria-current="page">Зворотній зв'язок</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="feedback-intro" aria-labelledby="feedback-title">
+                <h2 id="feedback-title">Зворотній зв'язок</h2>
+                <p>
+                    Розкажіть про ідею, партнерство або знайдену помилку. Форма побудована
+                    на Flexbox: контейнер керує перенесенням і вирівнюванням, а кожен
+                    елемент має власні order, flex-grow, flex-shrink та align-self.
+                </p>
+            </section>
+
+            <form class="feedback-form" action="#" method="post">
+                <fieldset class="form-card personal-info">
+                    <legend>Персональна інформація</legend>
+
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="fullname">Прізвище та ім'я</label>
+                            <input type="text" id="fullname" name="fullname" autocomplete="name" placeholder="Шевченко Тарас" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" autocomplete="email" placeholder="name@student.knu.ua" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="age">Вік</label>
+                            <input type="number" id="age" name="age" min="14" max="120" inputmode="numeric" placeholder="20" required>
+                        </div>
+                    </div>
+
+                    <p class="choice-title" id="education-label">Освіта</p>
+                    <div class="choice-grid" role="radiogroup" aria-labelledby="education-label">
+                        <label class="choice">
+                            <input type="radio" name="education" value="повна"> Повна
+                        </label>
+                        <label class="choice">
+                            <input type="radio" name="education" value="неповна"> Неповна
+                        </label>
+                        <label class="choice">
+                            <input type="radio" name="education" value="вища"> Вища
+                        </label>
+                        <label class="choice">
+                            <input type="radio" name="education" value="професійна"> Професійна
+                        </label>
+                    </div>
+
+                    <p class="choice-title" id="interests-label">Інтереси</p>
+                    <div class="choice-grid" role="group" aria-labelledby="interests-label">
+                        <label class="choice">
+                            <input type="checkbox" name="interests" value="науковець"> Науковець
+                        </label>
+                        <label class="choice">
+                            <input type="checkbox" name="interests" value="інвестор"> Інвестор
+                        </label>
+                        <label class="choice">
+                            <input type="checkbox" name="interests" value="промоутер"> Промоутер
+                        </label>
+                        <label class="choice">
+                            <input type="checkbox" name="interests" value="держслужбовець"> Держслужбовець
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-card message-info">
+                    <legend>Повідомлення</legend>
+
+                    <div class="field">
+                        <label for="goal">Мета зворотного зв'язку</label>
+                        <select id="goal" name="goal">
+                            <option value="співпраця">Співпраця</option>
+                            <option value="скарга">Скарга на порушення права власності</option>
+                            <option value="пропозиція">Пропозиція</option>
+                            <option value="помилка">Наявність помилки</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="details">Детально</label>
+                        <textarea id="details" name="details" rows="8" cols="40" maxlength="300" placeholder="Опишіть ваше питання (до 300 символів)..." required></textarea>
+                    </div>
+                </fieldset>
+
+                <aside class="form-aside" aria-label="Контакти підтримки">
+                    <p>
+                        <strong>Швидкий канал:</strong> hello@futuretech.ua ·
+                        +380 (44) 123-45-67. Для термінових звернень вкажіть
+                        «URGENT» на початку повідомлення.
+                    </p>
+                </aside>
+
+                <div class="form-actions">
+                    <label class="consent" for="consent">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <span>Я даю згоду на обробку персональних даних відповідно до політики конфіденційності.</span>
+                    </label>
+
+                    <div class="form-buttons">
+                        <button class="btn btn-primary" type="submit">Відправити</button>
+                        <button class="btn btn-ghost" type="reset">Очистити</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="projects-footer">
+                <p class="sources">
+                    Форма демонструє властивості flex-контейнера (flex-flow, justify-content,
+                    align-items, align-content) та flex-елементів (order, flex-grow,
+                    flex-shrink, align-self).
+                </p>
+                <a class="btn btn-ghost" href="index.html">← На головну сторінку</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 FutureTech Start-up. Всі права захищені.</p>
+            <a href="#top">Повернутися вгору сторінки ↑</a>
+        </div>
+    </footer>
+</body>
+</html>
