@@ -12,3 +12,59 @@
     --font-body: "Segoe UI", Tahoma, Verdana, sans-serif;
     --font-heading: Georgia, "Times New Roman", serif;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--orange-dark) #e8e1d4;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--paper);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--navy);
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--orange);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--navy);
+    line-height: 1.2;
+}
+
+h2 {
+    margin: 0 0 16px;
+    font-size: clamp(1.65rem, 3vw, 2.15rem);
+}
+
+h3 {
+    margin: 24px 0 10px;
+    font-size: 1.15rem;
+}
+
+p {
+    margin: 0 0 14px;
+}
