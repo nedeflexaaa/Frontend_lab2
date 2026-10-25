@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FutureTech Start-up — головна сторінка. Лабораторна робота №2: стилізація інтерфейсу засобами CSS.">
+    <title>FutureTech Start-up — Головна</title>
+    <link rel="icon" href="techcomp.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #mission-title {
+            color: #163a5f;
+        }
+
+        .main-page .mission h2 {
+            max-width: none;
+        }
+
+        .main-page .hitech-note {
+            background-color: #eef3f7;
+        }
+    </style>
+</head>
+
+<body class="main-page">
+    <header class="site-header" id="top">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="FutureTech Start-up — на головну сторінку">
+                <img class="brand-logo" src="techcomp.png" alt="Логотип FutureTech Start-up" width="48" height="48">
+                <span class="brand-name">FutureTech Start-up</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Головна навігація">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Головна</a></li>
+                    <li><a href="projects.html">Проєкти</a></li>
+                    <li><a href="#reviews">Відгуки про нас</a></li>
+                    <li><a href="feedback.html">Зворотній зв'язок</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="mission" aria-labelledby="mission-title">
+                <h2 id="mission-title">Наша мета</h2>
+
+                <p class="lead">
+                    Створення інноваційних технологічних рішень для автоматизації повсякденних
+                    завдань користувачів, об'єднання пристроїв і сервісів у єдину зрозумілу
+                    екосистему та забезпечення безпеки персональних даних на кожному рівні.
+                </p>
+
+                <h3>Завдання для досягнення мети</h3>
+                <ul class="task-list">
+                    <li>Розробка систем штучного інтелекту для розумного дому.</li>
+                    <li>Інтеграція IoT-пристроїв у єдину екосистему.</li>
+                    <li>Забезпечення максимальної безпеки персональних даних.</li>
+                    <li>Створення автономних сервісів із відкритим API.</li>
+                </ul>
+
+                <p class="mission-quote">
+                    <span>Ми</span> переконані, що <i>майбутнє</i> вже <b>настало</b>,
+                    і <em>кожен</em> заслуговує на <u>краще</u>.
+                </p>
+
+                <div class="hitech-note" aria-label="Hi-tech напрям">
+                    <span class="hitech-emoji" aria-hidden="true">🤖</span>
+                    <span>Hi-tech: <b>на зв'язку</b></span>
+                </div>
+            </article>
+
+            <section class="founders" id="founders" tabindex="0" aria-labelledby="founders-title" aria-describedby="founders-hint">
+                <h2 id="founders-title">Інформація про засновників</h2>
+                <p class="hint" id="founders-hint">
+                    Клікніть на блок або натисніть Tab — він зміститься праворуч на 2%.
+                    Таблиця має власну смугу прокручування.
+                </p>
+
+                <div class="table-wrap">
+                    <table>
+                        <caption>Засновники FutureTech Start-up</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">ПІБ</th>
+                                <th scope="col">Посада</th>
+                                <th scope="col">Освіта</th>
+                                <th scope="col">Досвід роботи</th>
+                                <th scope="col">Контакти</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Іванов І. І.</td>
+                                <td>CEO</td>
+                                <td rowspan="2">Магістр</td>
+                                <td>10 років</td>
+                                <td>ivanov@futuretech.com</td>
+                            </tr>
+                            <tr>
+                                <td>Петренко П. П.</td>
+                                <td>CTO</td>
+                                <td>8 років</td>
+                                <td>petrenko@futuretech.com</td>
+                            </tr>
+                            <tr>
+                                <td>Сидоренко С. С.</td>
+                                <td colspan="2">Lead Designer (Бакалавр)</td>
+                                <td>5 років</td>
+                                <td>sydorenko@futuretech.com</td>
+                            </tr>
+                            <tr>
+                                <td>Коваленко К. К.</td>
+                                <td>HR</td>
+                                <td>Магістр</td>
+                                <td colspan="2">Дані оновлюються...</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">Всього: 4 ключових особи</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+
+            <aside class="reviews" id="reviews" aria-labelledby="reviews-title">
+                <div>
+                    <h2 id="reviews-title">Наші партнери та відгуки</h2>
+                    <p>
+                        Нам довіряють технологічні гіганти, такі як
+                        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
+                        та
+                        <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">Microsoft</a>.
+                    </p>
+                    <p>
+                        Ми працюємо з відкритими стандартами, тому наші рішення легко
+                        інтегруються в уже наявну інфраструктуру замовника.
+                    </p>
+                </div>
+
+                <div class="contacts">
+                    <p><strong>Адреса:</strong> м. Київ, вул. Хрещатик, 1</p>
+                    <p><strong>Контактний телефон:</strong> +380 (44) 123-45-67</p>
+                    <p><strong>E-mail:</strong> hello@futuretech.ua</p>
+                </div>
+            </aside>
+
+            <div class="quick-actions">
+                <button class="btn btn-primary" type="button">Перейти у власний кабінет</button>
+                <button class="btn btn-ghost" type="button">Зареєструватись</button>
+                <p class="action-note">
+                    Демонстраційні кнопки макета. Форма реєстрації — на сторінці
+                    «Зворотній зв'язок».
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <a class="to-top" href="#top" aria-label="Повернутися вгору сторінки">↑</a>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 FutureTech Start-up. Всі права захищені.</p>
+            <a href="#top">Повернутися вгору сторінки ↑</a>
+        </div>
+    </footer>
+</body>
+</html>
