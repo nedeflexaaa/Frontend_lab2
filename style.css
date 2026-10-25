@@ -299,3 +299,61 @@ tfoot td {
     background-color: #f1ede4;
     font-weight: 600;
 }
+
+.reviews {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 28px;
+    padding: 28px 32px;
+    background-color: #ffffff;
+    border: 1px solid var(--line);
+}
+
+.reviews h2 {
+    margin-bottom: 12px;
+}
+
+.contacts {
+    padding: 16px 18px;
+    background-color: #f3f6f8;
+    border-left: 4px solid var(--orange);
+}
+
+.contacts p {
+    margin: 0 0 8px;
+}
+
+.contacts p:last-child {
+    margin-bottom: 0;
+}
+
+.contacts strong {
+    color: var(--navy);
+}
+
+/* Виділення адреси й телефонів: через 2 с фон і шрифт підсилюються */
+.contacts ::selection {
+    color: #ffffff;
+    background-color: hsl(22 78% 30%);
+    font-size: 110%;
+    text-shadow: 0 0 1px #ffffff, 0 0 2px rgba(255, 255, 255, 0.8);
+    transition:
+        background-color 0.3s ease 2s,
+        color 0.3s ease 2s,
+        font-size 0.3s ease 2s,
+        text-shadow 0.3s ease 2s;
+}
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 14px;
+    padding-top: 4px;
+}
+
+.action-note {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
