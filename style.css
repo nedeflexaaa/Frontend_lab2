@@ -68,3 +68,8 @@ h3 {
 p {
     margin: 0 0 14px;
 }
+
+.container {
+    width: min(1080px, calc(100% - 40px));
+    margin-inline: auto;
+}
