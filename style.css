@@ -602,3 +602,181 @@ tfoot td {
 .projects-footer .btn {
     flex: 0 0 auto;
 }
+.feedback-page main {
+    padding: 40px 0 56px;
+}
+
+.feedback-intro {
+    max-width: 760px;
+    margin-bottom: 28px;
+}
+
+.feedback-intro h2 {
+    margin-bottom: 10px;
+}
+
+/* Flex-контейнер форми */
+.feedback-form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.form-card {
+    flex: 1 1 520px;
+    min-width: 0;
+    margin: 0;
+    padding: 20px 22px 24px;
+    background-color: #ffffff;
+    border: 1px solid var(--line);
+}
+
+.form-card legend {
+    padding: 0 8px;
+    color: var(--navy);
+    background-color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.personal-info {
+    order: 1;
+}
+
+.message-info {
+    flex: 1 1 360px;
+    order: 2;
+}
+
+.form-aside {
+    flex: 1 1 100%;
+    order: 3;
+    align-self: stretch;
+    padding: 14px 18px;
+    background-color: #eef3f7;
+    border-left: 4px solid var(--orange);
+    font-size: 0.9rem;
+}
+
+.form-aside p {
+    margin: 0;
+}
+
+.form-actions {
+    flex: 1 1 100%;
+    order: 4;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 4px;
+}
+
+.field-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.field-row .field {
+    flex: 1 1 150px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 14px;
+}
+
+.field label,
+.choice-title {
+    color: var(--navy);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    color: var(--text);
+    background-color: #ffffff;
+    border: 1px solid #b9b2a3;
+    border-radius: 2px;
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field textarea {
+    min-height: 140px;
+    max-height: 220px;
+    resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: var(--navy);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(22, 58, 95, 0.12);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: #9a9489;
+}
+
+input[type="email"] {
+    background-color: #fdfdfb;
+}
+
+.choice-title {
+    margin: 0 0 8px;
+}
+
+.choice-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin-bottom: 14px;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.92rem;
+}
+
+.choice input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--orange);
+}
+
+.consent {
+    display: flex;
+    flex: 1 1 420px;
+    align-items: flex-start;
+    gap: 8px;
+    color: #4a463e;
+    font-size: 0.86rem;
+}
+
+.consent input {
+    margin-top: 4px;
+    accent-color: var(--orange);
+}
+
+.form-buttons {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+}
