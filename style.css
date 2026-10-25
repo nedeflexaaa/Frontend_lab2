@@ -73,3 +73,130 @@ p {
     width: min(1080px, calc(100% - 40px));
     margin-inline: auto;
 }
+
+.site-header {
+    background-color: white;
+    border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+    width: min(1080px, calc(100% - 40px));
+    min-height: 76px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.brand:hover {
+    color: var(--navy);
+}
+
+.brand-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border: 1px solid var(--line);
+}
+
+.brand-name {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.site-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 22px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav a {
+    display: inline-block;
+    padding: 6px 0;
+    color: var(--navy);
+    font-size: 0.93rem;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+    color: var(--orange-dark);
+    border-bottom-color: var(--orange);
+}
+
+.main-page .site-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.main-page main {
+    padding-top: 116px;
+}
+
+/* Grid-контейнер сторінки */
+.main-page main > .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding-bottom: 48px;
+}
+
+/* Блок мети: зовнішні відступи 0, внутрішні — є */
+.mission {
+    position: relative;
+    margin: 0;
+    padding: 34px 38px;
+    background-color: #ffffff;
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--orange);
+}
+
+.mission h2 + p {
+    margin-top: 0;
+}
+
+.mission > .task-list {
+    margin-bottom: 18px;
+}
+
+.lead {
+    font-size: 1.05rem;
+}
+
+.task-list {
+    margin: 0 0 18px;
+    padding-left: 22px;
+}
+
+.task-list li {
+    margin-bottom: 6px;
+}
+
+.task-list li::marker {
+    color: var(--orange);
+}
+
+.mission-quote {
+    margin-bottom: 0;
+}
+
+.mission-quote span {
+    font-weight: 600;
+}
