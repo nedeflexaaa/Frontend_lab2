@@ -806,3 +806,63 @@ input[type="email"] {
 .site-footer a:hover {
     color: #ffffff;
 }
+
+@keyframes card-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes emoji-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e8e1d4;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--orange-dark);
+    border: 3px solid #e8e1d4;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--orange);
+}
+
+.table-wrap::-webkit-scrollbar {
+    width: 10px;
+}
+
+.table-wrap::-webkit-scrollbar-track {
+    background-color: #ece6d9;
+}
+
+.table-wrap::-webkit-scrollbar-thumb {
+    background-color: var(--navy);
+    border: 2px solid #ece6d9;
+    border-radius: 0;
+}
+
+.table-wrap::-webkit-scrollbar-thumb:hover {
+    background-color: var(--orange-dark);
+}
