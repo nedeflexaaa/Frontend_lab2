@@ -780,3 +780,29 @@ input[type="email"] {
     flex: 0 0 auto;
     gap: 10px;
 }
+
+.site-footer {
+    background-color: var(--navy-dark);
+    color: #d8dde3;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 0;
+    font-size: 0.85rem;
+}
+
+.footer-inner p {
+    margin: 0;
+}
+
+.site-footer a {
+    color: #e8c9a8;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+}
